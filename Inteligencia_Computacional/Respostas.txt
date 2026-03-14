@@ -1,0 +1,7 @@
+1 - a) Nivel 3
+    b) A → B → E → G
+    c) 3 níveis.
+
+2 - a) A → B → D → E → G → C → F
+    b) Não, o caminho seria diferente, e exigiria mais passos.
+    c) Sim, e não repete a procura.
