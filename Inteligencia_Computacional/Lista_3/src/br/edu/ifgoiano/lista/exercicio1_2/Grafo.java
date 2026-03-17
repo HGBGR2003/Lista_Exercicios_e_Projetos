@@ -150,7 +150,7 @@ public class Grafo {
                     return true;
             }
         }
-        caminho.remove(caminho.size() - 1); // backtrack
+        caminho.remove(caminho.size() - 1);
         return false;
     }
 

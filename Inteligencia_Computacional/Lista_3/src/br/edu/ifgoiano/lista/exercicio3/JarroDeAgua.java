@@ -41,7 +41,7 @@ public class JarroDeAgua {
 
     Grafo grafo;
 
-    public void questao3() {
+    public void jarroDeAgua() {
         System.out.println("\nQuestão 3:");
         this.grafo = new Grafo();
 

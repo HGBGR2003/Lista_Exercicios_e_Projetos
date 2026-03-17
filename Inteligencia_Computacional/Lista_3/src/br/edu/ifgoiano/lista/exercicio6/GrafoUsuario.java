@@ -3,8 +3,7 @@ package br.edu.ifgoiano.lista.exercicio6;
 import java.util.*;
 
 public class GrafoUsuario {
-    public static void buscaLargura(Map<String, List<String>> grafo,
-            String inicio, String objetivo) {
+    public static void buscaLargura(Map<String, List<String>> grafo, String inicio, String objetivo) {
         Queue<List<String>> fila = new LinkedList<>();
         Set<String> visitados = new LinkedHashSet<>();
 
@@ -16,7 +15,7 @@ public class GrafoUsuario {
             String noAtual = caminho.get(caminho.size() - 1);
 
             if (noAtual.equals(objetivo)) {
-                System.out.println("\n=== RESULTADO ===");
+                System.out.println("\nRESULTADO");
                 System.out.println("Caminho encontrado : " + String.join(" -> ", caminho));
                 System.out.println("Nós visitados      : " + visitados.size());
                 System.out.println("Ordem de visita    : " + visitados);
@@ -42,7 +41,7 @@ public class GrafoUsuario {
         Scanner sc = new Scanner(System.in);
         Map<String, List<String>> grafo = new HashMap<>();
 
-        System.out.println("=== BFS - Busca em Largura ===\n");
+        System.out.println("BFS - Busca em Largura\n");
         System.out.println("Digite as arestas no formato:  NÓ_ORIGEM NÓ_DESTINO");
         System.out.println("(digite 'fim' para encerrar a entrada)\n");
 
