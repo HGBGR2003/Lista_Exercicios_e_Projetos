@@ -43,8 +43,8 @@ public class GrafoUsuario {
         Map<String, List<String>> grafo = new HashMap<>();
 
         System.out.println("BFS - Busca em Largura\n");
-        System.out.println("Digite as arestas no formato:  NÓ_ORIGEM NÓ_DESTINO");
-        System.out.println("(digite 'fim' para encerrar a entrada)\n");
+        System.out.println("Digite as arestas no formato:  NÓ DE ORIGEM NÓ DE DESTINO");
+        System.out.println("(Digite 'fim' para encerrar a entrada)\n");
 
         while (true) {
             System.out.print("Aresta: ");
@@ -55,7 +55,7 @@ public class GrafoUsuario {
 
             String[] partes = linha.split("\\s+");
             if (partes.length != 2) {
-                System.out.println("  Formato inválido! Use: NÓ_ORIGEM NÓ_DESTINO");
+                System.out.println("  Formato inválido! Use: NÓ DE ORIGEM NÓ DE DESTINO");
                 continue;
             }
 
