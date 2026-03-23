@@ -3,16 +3,16 @@ package br.edu.ifgoiano.lista.exercicio6;
 import java.util.*;
 
 public class GrafoUsuario {
-    public static void buscaLargura(Map<String, List<String>> grafo, String inicio, String objetivo) {
-        Queue<List<String>> fila = new LinkedList<>();
-        Set<String> visitados = new LinkedHashSet<>();
+    public static void buscaLargura(Map<String, List<String>> grafo, String inicio, String objetivo) { 
+        Queue<List<String>> fila = new LinkedList<>(); //Armazena os caminhos inteiros
+        Set<String> visitados = new LinkedHashSet<>(); //Guarda os Nós, usando uma lista hash.
 
         fila.add(new ArrayList<>(List.of(inicio)));
         visitados.add(inicio);
 
         while (!fila.isEmpty()) {
-            List<String> caminho = fila.poll();
-            String noAtual = caminho.get(caminho.size() - 1);
+            List<String> caminho = fila.poll(); //Retira o primeiro caminho da fila.
+            String noAtual = caminho.get(caminho.size() - 1); //Pega o ultimo nó da fila.
 
             if (noAtual.equals(objetivo)) {
                 System.out.println("\nRESULTADO");
@@ -23,12 +23,13 @@ public class GrafoUsuario {
             }
 
             List<String> vizinhos = grafo.getOrDefault(noAtual, new ArrayList<>());
+
             for (String vizinho : vizinhos) {
                 if (!visitados.contains(vizinho)) {
                     visitados.add(vizinho);
                     List<String> novoCaminho = new ArrayList<>(caminho);
                     novoCaminho.add(vizinho);
-                    fila.add(novoCaminho);
+                    fila.add(novoCaminho); //Método de verificação para ver se existe nós duplicados, e coloca para um novo caminho.
                 }
             }
         }
@@ -62,12 +63,12 @@ public class GrafoUsuario {
             String destino = partes[1];
 
             grafo.computeIfAbsent(origem, k -> new ArrayList<>()).add(destino);
-            grafo.computeIfAbsent(destino, k -> new ArrayList<>());
+            grafo.computeIfAbsent(destino, k -> new ArrayList<>()); //Cria o grafo para o caminho de origem até o caminho final.
         }
 
         if (grafo.isEmpty()) {
             System.out.println("Grafo vazio. Encerrando.");
-            return;
+            return; 
         }
 
         System.out.println("\nNós disponíveis: " + grafo.keySet());
@@ -84,7 +85,7 @@ public class GrafoUsuario {
         }
         if (!grafo.containsKey(objetivo)) {
             System.out.println("Nó objetivo '" + objetivo + "' não existe no grafo.");
-            return;
+            return; //Método de verificação.
         }
 
         buscaLargura(grafo, inicio, objetivo);
@@ -92,3 +93,22 @@ public class GrafoUsuario {
         sc.close();
     }
 }
+
+/*
+
+Exemplo de grafo:
+
+Aresta: A B
+Aresta: A C
+Aresta: B D
+Aresta: C E
+Aresta: E D
+Aresta: D F
+Aresta: fim
+
+Nós disponíveis: [A, B, C, D, E, F]
+
+Nó inicial  : A
+Nó objetivo : F
+
+ */
