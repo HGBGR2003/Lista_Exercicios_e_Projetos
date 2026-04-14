@@ -231,7 +231,10 @@ kbd {
   background: #555;
   border: 3px solid #333;
   border-radius: 4px;
-  padding: 0
+  padding: 0;
+  justify-content: center;
+  height: 445px;
+  padding: 4px;
 }
 
 .cell {
@@ -427,8 +430,13 @@ kbd {
   font-size: .9rem;
 }
 
-.result-banner.win #result-title  { color: var(--green); }
-.result-banner.lose #result-title { color: var(--red); }
+.result-banner.win #result-title {
+  color: var(--green);
+}
+
+.result-banner.lose #result-title {
+  color: var(--red);
+}
 
 .result-banner .btn.restart {
   margin: 0;
@@ -440,46 +448,118 @@ kbd {
 /* ===== MODAIS DE FIM DE JOGO ===== */
 
 @keyframes modalFadeIn {
-  from { opacity: 0 }
-  to   { opacity: 1 }
+  from {
+    opacity: 0
+  }
+
+  to {
+    opacity: 1
+  }
 }
 
 @keyframes modalBoxIn {
-  0%   { transform: scale(0.8) translateY(30px); opacity: 0 }
-  70%  { transform: scale(1.03) translateY(-4px); opacity: 1 }
-  100% { transform: scale(1) translateY(0) }
+  0% {
+    transform: scale(0.8) translateY(30px);
+    opacity: 0
+  }
+
+  70% {
+    transform: scale(1.03) translateY(-4px);
+    opacity: 1
+  }
+
+  100% {
+    transform: scale(1) translateY(0)
+  }
 }
 
 @keyframes wumpusSlideIn {
-  0%   { transform: translateY(80px) scale(0.5) rotate(-12deg); opacity: 0 }
-  60%  { transform: translateY(-14px) scale(1.1) rotate(3deg);  opacity: 1 }
-  80%  { transform: translateY(6px) scale(0.98) rotate(-1deg) }
-  100% { transform: translateY(0) scale(1) rotate(0deg) }
+  0% {
+    transform: translateY(80px) scale(0.5) rotate(-12deg);
+    opacity: 0
+  }
+
+  60% {
+    transform: translateY(-14px) scale(1.1) rotate(3deg);
+    opacity: 1
+  }
+
+  80% {
+    transform: translateY(6px) scale(0.98) rotate(-1deg)
+  }
+
+  100% {
+    transform: translateY(0) scale(1) rotate(0deg)
+  }
 }
 
 @keyframes wumpusBounce {
-  0%, 100% { transform: translateY(0) rotate(0deg) }
-  35%       { transform: translateY(-10px) rotate(-3deg) }
-  70%       { transform: translateY(-5px) rotate(3deg) }
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg)
+  }
+
+  35% {
+    transform: translateY(-10px) rotate(-3deg)
+  }
+
+  70% {
+    transform: translateY(-5px) rotate(3deg)
+  }
 }
 
 @keyframes speechPop {
-  0%   { transform: scale(0) rotate(-6deg); opacity: 0 }
-  65%  { transform: scale(1.12) rotate(2deg); opacity: 1 }
-  100% { transform: scale(1) rotate(-1deg) }
+  0% {
+    transform: scale(0) rotate(-6deg);
+    opacity: 0
+  }
+
+  65% {
+    transform: scale(1.12) rotate(2deg);
+    opacity: 1
+  }
+
+  100% {
+    transform: scale(1) rotate(-1deg)
+  }
 }
 
 @keyframes textGlitch {
-  0%, 88%, 100% { text-shadow: 2px 0 #ff0000, -2px 0 #00ffff }
-  90%            { text-shadow: -4px 0 #ff0000, 4px 0 #00ffff }
-  93%            { text-shadow: 4px 0 #ff0000, -4px 0 #00ffff }
-  96%            { text-shadow: -2px 0 #ff4400, 2px 0 #00ffcc }
+
+  0%,
+  88%,
+  100% {
+    text-shadow: 2px 0 #ff0000, -2px 0 #00ffff
+  }
+
+  90% {
+    text-shadow: -4px 0 #ff0000, 4px 0 #00ffff
+  }
+
+  93% {
+    text-shadow: 4px 0 #ff0000, -4px 0 #00ffff
+  }
+
+  96% {
+    text-shadow: -2px 0 #ff4400, 2px 0 #00ffcc
+  }
 }
 
 @keyframes pitDrop {
-  0%   { transform: translateY(-40px) scale(0.7); opacity: 0 }
-  60%  { transform: translateY(6px) scale(1.05); opacity: 1 }
-  100% { transform: translateY(0) scale(1) }
+  0% {
+    transform: translateY(-40px) scale(0.7);
+    opacity: 0
+  }
+
+  60% {
+    transform: translateY(6px) scale(1.05);
+    opacity: 1
+  }
+
+  100% {
+    transform: translateY(0) scale(1)
+  }
 }
 
 /* Fundo escuro compartilhado */
@@ -506,14 +586,14 @@ kbd {
   position: relative;
   max-width: 340px;
   width: 90%;
-  animation: modalBoxIn 0.45s cubic-bezier(.23,1.2,.55,1) 0.05s both;
+  animation: modalBoxIn 0.45s cubic-bezier(.23, 1.2, .55, 1) 0.05s both;
 }
 
 /* ---- Modal Wumpus ---- */
 .modal-wumpus-box {
   background: #1a0a0a;
   border: 2px solid #5a1a1a;
-  box-shadow: 0 0 60px rgba(200, 40, 40, 0.35), 0 8px 32px rgba(0,0,0,0.6);
+  box-shadow: 0 0 60px rgba(200, 40, 40, 0.35), 0 8px 32px rgba(0, 0, 0, 0.6);
 }
 
 .modal-wumpus-img {
@@ -523,8 +603,8 @@ kbd {
   image-rendering: pixelated;
   filter: drop-shadow(0 0 20px rgba(220, 60, 60, 0.75));
   animation:
-    wumpusSlideIn 0.65s cubic-bezier(.23,1.2,.55,1) 0.1s both,
-    wumpusBounce  2.2s ease-in-out 1s infinite;
+    wumpusSlideIn 0.65s cubic-bezier(.23, 1.2, .55, 1) 0.1s both,
+    wumpusBounce 2.2s ease-in-out 1s infinite;
 }
 
 .modal-speech {
@@ -533,9 +613,10 @@ kbd {
   border-radius: 16px;
   padding: .65rem 1.4rem;
   position: relative;
-  animation: speechPop 0.45s cubic-bezier(.23,1.3,.55,1) 0.7s both;
+  animation: speechPop 0.45s cubic-bezier(.23, 1.3, .55, 1) 0.7s both;
   order: -1;
 }
+
 .modal-speech::after {
   content: '';
   position: absolute;
@@ -545,6 +626,7 @@ kbd {
   border: 9px solid transparent;
   border-top-color: #111;
 }
+
 .modal-speech::before {
   content: '';
   position: absolute;
@@ -570,13 +652,13 @@ kbd {
 .modal-pit-box {
   background: #0e131c;
   border: 2px solid #2a3a5a;
-  box-shadow: 0 0 50px rgba(40, 80, 180, 0.25), 0 8px 32px rgba(0,0,0,0.6);
+  box-shadow: 0 0 50px rgba(40, 80, 180, 0.25), 0 8px 32px rgba(0, 0, 0, 0.6);
 }
 
 .modal-pit-icon {
   font-size: 4rem;
   line-height: 1;
-  animation: pitDrop 0.6s cubic-bezier(.23,1.15,.55,1) 0.1s both;
+  animation: pitDrop 0.6s cubic-bezier(.23, 1.15, .55, 1) 0.1s both;
 }
 
 .modal-pit-title {
@@ -625,12 +707,18 @@ kbd {
   width: auto !important;
   flex: 1;
 }
-.modal-btn-restart:hover { background: #9a1a1a !important; }
+
+.modal-btn-restart:hover {
+  background: #9a1a1a !important;
+}
 
 .modal-pit-box .modal-btn-restart {
   background: #2a5aaa !important;
 }
-.modal-pit-box .modal-btn-restart:hover { background: #1a3a7a !important; }
+
+.modal-pit-box .modal-btn-restart:hover {
+  background: #1a3a7a !important;
+}
 
 .modal-btn-close {
   background: #333 !important;
@@ -642,4 +730,8 @@ kbd {
   margin: 0 !important;
   width: auto !important;
 }
-.modal-btn-close:hover { background: #444 !important; color: #eee !important; }
+
+.modal-btn-close:hover {
+  background: #444 !important;
+  color: #eee !important;
+}
