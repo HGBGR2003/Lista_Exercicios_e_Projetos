@@ -1,4 +1,4 @@
-# Lista de Exercícios
+# Lista de Exercícios e Projetos
 
 Este repositório contém exercícios e projetos das matérias estudadas.
 
