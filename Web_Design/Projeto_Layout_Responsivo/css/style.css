@@ -1,19 +1,26 @@
 :root {
   --cor-primaria: #eb5b95;
   --cor-secundaria: #2729d3;
-  --fonte-principal: 'Nunito', sans-serif;
+  --fonte-principal: "Nunito", sans-serif;
 }
 
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  height: 1600px;
-  width: 900px;
-  position: relative;
   font-family: var(--fonte-principal);
+  height: min(100dvh, calc(100vw * (16 / 9)));
+  width: min(100vw, calc(100dvh * (9 / 16)));
+  aspect-ratio: 9/16;
+  position: relative;
+  background-color: #fff;
+  margin: 0 auto;
+  padding: 14px 10px 0;
+  overflow: hidden;
+  border-radius: 20px
 }
 
 nav {
@@ -34,98 +41,170 @@ nav div {
 }
 
 .svg-class {
-  width: 32px;
+  width: 20px;
+  fill: #3d3a7a;
 }
 
 .cabecalho {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
 }
 
-.grido{
-    display: grid;
-    grid-template-columns: 40% 60%;
+.grido {
+  display: grid;
+  grid-template-columns: 114px 1fr;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 16px;
 }
 
-#guy-pink{
-    width: 90%;
-    display: block;
-    margin: 0 auto;
-    border-radius: 25px;
+.bell-wrap {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
-#drive{
-  color: #E4E3E8;  
+.badge {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--cor-primaria);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 900;
+  display: grid;
+  place-items: center;
+  line-height: 1;
 }
 
-#text-principal {
+#guy-pink {
+  width: 114px;
+  height: 144px;
+  object-fit: cover;
+  margin: 0;
+  border-radius: 10px;
+}
+
+#drive {
+  font-size: 12px;
+  font-weight: 600;
+  color: #a8a6ba;
+}
+
+#text-principal h1 {
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.1;
+  color: #343172;
+  margin-bottom: 4px;
+}
+
+.phone {
+  font-weight: 700;
+  font-size: 13px;
+  color: #7a7894;
+  margin-bottom: 4px;
+}
+
+#box-1 {
+  margin-bottom: 16px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  background-color: #fff;
+  box-shadow: -3px 3px 10px 2px rgba(0, 0, 0, 0.3);
+  width: 850px;
+  border-radius: 2rem;
+  padding: 70px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-}
-
-.icon-princpal, .icon-princpal > a{
-    background-color: var(--cor-primaria);
-    border-radius: 2rem;
-    width: 2rem;
-    padding: 36px 30px;
-    color: #ffff;
-}
-
-#box-1{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-
-}
-
-.box{
-    background-color: #fff;
-    box-shadow: -3px 3px 10px 2px rgba(0, 0, 0, 0.3);
-    width: 850px;
-    border-radius: 2rem;
-    padding: 70px;
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
+  gap: 25px;
 }
 
 .box h2 {
-    margin-bottom: 15px;
-    font-size: 28px;
-    color: var(--cor-secundaria);
+  margin-bottom: 15px;
+  font-size: 28px;
+  color: var(--cor-secundaria);
 }
 
 .box h6 {
-    margin-top: 15px;
-    font-size: 18px;
-    color: var(--cor-primaria);
+  margin-top: 15px;
+  font-size: 18px;
+  color: var(--cor-primaria);
 }
 
-.box > p{
-    padding: 12px 8px;
-    margin: 8px 0;
-    line-height: 1.8;
-    font-size: 16px;
+.box > p {
+  padding: 12px 8px;
+  margin: 8px 0;
+  line-height: 1.8;
+  font-size: 16px;
 }
 
 .box ul {
-    margin-left: 20px;
-    gap: 12px;
-    display: flex;
-    flex-direction: column;
+  margin-left: 20px;
+  gap: 12px;
+  display: flex;
+  flex-direction: column;
 }
 
 .box li {
-    margin: 8px 0;
+  margin: 8px 0;
 }
 
-button{
-    padding: 30px;
-    border-radius: 30px;
-    background-color: var(--cor-secundaria);
+button {
+  padding: 30px;
+  border-radius: 30px;
+  background-color: var(--cor-secundaria);
 }
 
+.top-actions {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.icon-princpal {
+  height: 88px;
+  border-radius: 14px;
+  background-color: #fff;
+  box-shadow: 0 8px 18px rgba(40, 35, 89, 0.08);
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.icon-princpal .svg-class {
+  width: 17px;
+  fill: #a5a2be;
+}
+
+.icon-princpal span {
+  font-size: 11px;
+  font-weight: 600;
+  color: #a5a2be;
+}
+
+.icon-princpal.ativo {
+  background-color: var(--cor-primaria);
+}
+
+.icon-principal.ativo .svg-class {
+  fill: #fff;
+}
+
+.icon-principal.ativo span {
+  color: #fff;
+}
