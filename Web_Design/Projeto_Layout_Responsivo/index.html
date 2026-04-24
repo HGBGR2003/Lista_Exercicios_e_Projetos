@@ -8,7 +8,10 @@
   <link rel="stylesheet" href="css/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
 
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
 </head>
 
 <body>
@@ -35,7 +38,7 @@
       <section id="text-principal">
         <h1>Daniel Quite</h1>
         <p class="phone">+29 0278 3850</p>
-        <p id="drive">Driver</p>
+        <p class="drive">Driver</p>
       </section>
     </section>
 
@@ -108,18 +111,54 @@
           </div>
         </div>
 
-        <p>Chicago</p>
-        <p>Oak Park</p>
+        <div class="checking">
 
-        <section>
-          <form action="ride.html">
-            <button id="btn-decline">Decline</button>
-            <button>Accept</button>
-          </form>
-        </section>
+          <div class="flex flex-col items-center justify-between h-30 w-12">
+
+            <div class="w-6 h-8 bg-[#a3a3e3] rounded-[8px] flex items-center justify-center">
+              <div class="w-2 h-2 bg-white rounded-full"></div>
+            </div>
+
+            <div class="border-l-2 border-dashed border-gray-200 h-10 my-2"></div>
+
+            <div class="w-6 h-8 bg-[#f0edff] rounded-[8px] flex items-center justify-center">
+              <div class="w-2 h-2 bg-[#847dd1] rounded-full"></div>
+            </div>
+
+          </div>
+
+          <div class="city">
+            <h3>Chicago</h3>
+            <p class="drive"> Distance 15,8 km </p>
+            <h3>Oak Park</h3>
+          </div>
+
+          <div class="flex flex-col justify-between h-27">
+            <h4>20:00</h4>
+            <h4>22:30</h4>
+          </div>
+        </div>
       </section>
     </div>
 
+    <!-- <section>
+      <form action="ride.html">
+        <button id="btn-decline">Decline</button>
+        <button>Accept</button>
+      </form>
+    </section> -->
+
+    <div class="absolute -bottom-25 right-18 flex justify-between items-center gap-4">
+      <button class="text-pink-500 font-semibold">
+        Decline
+      </button>
+
+      <button class="bg-blue-700 text-white h-[100px] min-w-[90px] rounded-3xl text-lg font-semibold shadow-lg">
+        Accept
+      </button>
+      
+    </div>
+    </div>
   </main>
 </body>
 
