@@ -1,0 +1,78 @@
+:root {
+      --cor-primaria: #eb5b95;
+      --cor-secundaria: #2729d3;
+      --fonte-principal: Poppins;
+      }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--fonte-principal);
+}
+
+body {
+  font-family: var(--fonte-principal);
+  height: min(100dvh, calc(100vw * (16 / 9)));
+  width: min(100vw, calc(100dvh * (9 / 16)));
+  aspect-ratio: 9/16;
+  position: relative;
+  background-color: #ffff;
+  margin: 0 auto;
+  padding: 14px 10px 0;
+  overflow: auto;
+  border-radius: 20px
+}
+
+nav {
+  position: relative;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+}
+
+nav div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.svg-class {
+  width: 20px;
+  fill: #fff;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.month{
+    /* padding: 40px 30px; */
+    color:#BAB5F7;
+    width: 100px;
+    height: 170px;  
+    border-radius: 17px;
+}
+
+.n-month{
+    font-size: 30px;
+    font-weight: 600;
+}
+
+#month-top{
+    fill: var(--cor-secundaria);
+}
+
+.month.active{
+    background-color: #fff;
+    color: var(--cor-secundaria);
+    position: relative;
+    bottom: -20px;
+}
+
