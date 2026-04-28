@@ -13,16 +13,16 @@
 </head>
 
 <body>
-  <header class="bg-[#2729d3]">
-    <section class="flex justify-between items-center mb-[14px]">
+  <header id="h-s">
+    <section class="flex justify-between items-center mb-[14px]" id="i-main">
       <div class="icons">
-        <svg class="svg-class" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+        <svg class="svg-class" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="48" height="48">
           <path
-            d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 288 480 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-370.7 0 105.4-105.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" />
+            d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z" />
         </svg>
       </div>
       <div class="icons">
-        <svg class="svg-class" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+        <svg class="svg-class" id="turn-top" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
           <path
             d="M32 64C14.3 64 0 78.3 0 96s14.3 32 32 32l86.7 0c12.3 28.3 40.5 48 73.3 48s61-19.7 73.3-48L480 128c17.7 0 32-14.3 32-32s-14.3-32-32-32L265.3 64C253 35.7 224.8 16 192 16s-61 19.7-73.3 48L32 64zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32l246.7 0c12.3 28.3 40.5 48 73.3 48s61-19.7 73.3-48l54.7 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-54.7 0c-12.3-28.3-40.5-48-73.3-48s-61 19.7-73.3 48L32 224zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32l54.7 0c12.3 28.3 40.5 48 73.3 48s61-19.7 73.3-48L480 448c17.7 0 32-14.3 32-32s-14.3-32-32-32l-246.7 0c-12.3-28.3-40.5-48-73.3-48s-61 19.7-73.3 48L32 384z" />
         </svg>
@@ -30,36 +30,50 @@
     </section>
 
     <section class="block w-full pl-[40px]">
-      <h1 class="text-white text-[40px]">Ride</h1>
+      <h1 class="text-white text-[40px]" id="text-main">Ride</h1>
     </section>
 
     <section class="block w-full">
       <nav>
-
         <div class="month">
-          <p class="n-month">26</p>
-          <p>May</p>
+          <section class="month-down">
+            <p class="n-month">26</p>
+            <p>May</p>
+          </section>
         </div>
 
         <div class="month">
-          <p class="n-month">27</p>
-          <p>May</p>
+          <section class="month-down">
+            <p class="n-month">27</p>
+            <p>May</p>
+          </section>
         </div>
 
         <div class="month active" id="month-top">
-          <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M120 0c13.3 0 24 10.7 24 24l0 40 160 0 0-40c0-13.3 10.7-24 24-24s24 10.7 24 24l0 40 32 0c35.3 0 64 28.7 64 64l0 288c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 128C0 92.7 28.7 64 64 64l32 0 0-40c0-13.3 10.7-24 24-24zm0 112l-56 0c-8.8 0-16 7.2-16 16l0 48 352 0 0-48c0-8.8-7.2-16-16-16l-264 0zM48 224l0 192c0 8.8 7.2 16 16 16l320 0c8.8 0 16-7.2 16-16l0-192-352 0z"/></svg>
-          <p class="n-month">28</p>
-          <p>May</p>
+          <section class="month-down">
+            <section id="svg-calendar">
+              <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path
+                  d="M120 0c13.3 0 24 10.7 24 24l0 40 160 0 0-40c0-13.3 10.7-24 24-24s24 10.7 24 24l0 40 32 0c35.3 0 64 28.7 64 64l0 288c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 128C0 92.7 28.7 64 64 64l32 0 0-40c0-13.3 10.7-24 24-24zm0 112l-56 0c-8.8 0-16 7.2-16 16l0 48 352 0 0-48c0-8.8-7.2-16-16-16l-264 0zM48 224l0 192c0 8.8 7.2 16 16 16l320 0c8.8 0 16-7.2 16-16l0-192-352 0z" />
+              </svg>
+            </section>
+            <p class="n-month">28</p>
+            <p>May</p>
+          </section>
         </div>
 
         <div class="month">
-          <p class="n-month">29</p>
-          <p>May</p>
+          <section class="month-down">
+            <p class="n-month">29</p>
+            <p>May</p>
+          </section>
         </div>
 
         <div class="month">
-          <p class="n-month">30</p>
-          <p>May</p>
+          <section class="month-down">
+            <p class="n-month">30</p>
+            <p>May</p>
+          </section>
         </div>
       </nav>
     </section>

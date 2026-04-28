@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
 :root {
-      --cor-primaria: #eb5b95;
-      --cor-secundaria: #2729d3;
-      --fonte-principal: Poppins;
-      }
+  --cor-primaria: #eb5b95;
+  --cor-secundaria: #2729d3;
+  --fonte-principal:'Poppins';
+}
 
 * {
   margin: 0;
@@ -11,7 +14,7 @@
   font-family: var(--fonte-principal);
 }
 
-header{
+header {
   border-radius: 8px;
 }
 
@@ -26,12 +29,7 @@ body {
 }
 
 nav {
-  position: relative;
-  left: 0;
-  right: 0;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
   gap: 20px;
 }
 
@@ -53,23 +51,66 @@ nav div {
   gap: 5px;
 }
 
-.month{
-    color:#BAB5F7;
-    width: 100px;
-    height: 170px;  
-    border-radius: 17px;
+.month {
+  color: #bab5f7;
+  width: 100px;
+  height: 170px;
+  border-radius: 17px;
 }
 
-.n-month{
-    font-size: 30px;
-    font-weight: 600;
+.n-month {
+  font-size: 30px;
+  font-weight: 600;
 }
 
 .month.active {
-    background-color: #fff;
-    color: var(--cor-secundaria);
-    fill: var(--cor-secundaria); /* ← mova aqui e remova #month-top */
-    position: relative;
-    bottom: -20px;
+  background-color: #fff;
+  color: var(--cor-secundaria);
+  fill: var(--cor-secundaria); 
+  position: relative;
+  z-index: 1;
+  bottom: -43px;
+}
+
+.month.active .month-down {
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+  align-content: center;
+}
+
+.month-down {
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+  align-content: end;
+}
+
+#svg-calendar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#text-main{
+  margin-left: 30px;
+  margin-top: 50px;
+  font-weight: 700;
+}
+
+#h-s{
+  background-color: var(--cor-secundaria);
+  padding: 20px;
+}
+
+#i-main{
+  padding: 10px 20px;
+}
+
+#turn-top{
+  transform: rotate(90deg) scale(1.4);
 }
 
