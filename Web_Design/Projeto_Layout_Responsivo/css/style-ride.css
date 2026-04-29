@@ -1,10 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
   --cor-primaria: #eb5b95;
   --cor-secundaria: #2729d3;
-  --fonte-principal:'Poppins';
+  --fonte-principal: "Poppins";
 }
 
 * {
@@ -25,7 +24,6 @@ body {
   background-color: #fff;
   margin: 0 auto;
   padding: 14px 10px 0;
-  overflow: auto;
 }
 
 nav {
@@ -51,6 +49,44 @@ nav div {
   gap: 5px;
 }
 
+.icon-reguest {
+  width: 32px;
+  fill: #3d3a7a;
+  padding: 8px;
+  border-radius: 8px;
+  border: solid;
+  border-color: #f3f3f3;
+}
+
+#users {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#users h3 {
+  white-space: nowrap;
+  margin-top: 20px;
+}
+
+#img-user {
+  width: 40px;
+  height: 55px;
+  object-fit: cover;
+  margin-left: 8px;
+  border-radius: 10px;
+}
+
+.user p {
+  color: #343172;
+  font-size: 12px;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+}
+
 .month {
   color: #bab5f7;
   width: 100px;
@@ -66,7 +102,7 @@ nav div {
 .month.active {
   background-color: #fff;
   color: var(--cor-secundaria);
-  fill: var(--cor-secundaria); 
+  fill: var(--cor-secundaria);
   position: relative;
   z-index: 1;
   bottom: -43px;
@@ -95,22 +131,55 @@ nav div {
   justify-content: center;
 }
 
-#text-main{
+#text-main {
   margin-left: 30px;
   margin-top: 50px;
   font-weight: 700;
 }
 
-#h-s{
+#h-s {
   background-color: var(--cor-secundaria);
   padding: 20px;
 }
 
-#i-main{
+#i-main {
   padding: 10px 20px;
 }
 
-#turn-top{
+#turn-top {
   transform: rotate(90deg) scale(1.4);
 }
 
+#box-1 {
+  margin-bottom: 16px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  /* background-color: #fd1919; */ /*Mudar a cor*/
+  box-shadow: -3px 3px 5px 3px rgba(0, 0, 0, 0.03);
+  height: 450px;
+  width: 450px;
+  border-radius: 2rem;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.box h3 {
+  font-size: 18px;
+  font-weight: bold;
+  font-family: Poppins;
+  color: #3d3a7a;
+}
+
+.box > p {
+  padding: 12px 8px;
+  margin: 8px 0;
+  line-height: 1.8;
+  font-size: 16px;
+}
