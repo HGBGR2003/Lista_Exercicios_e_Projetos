@@ -1,43 +1,46 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
-  --cor-primaria: #eb5b95;
-  --cor-secundaria: #2729d3;
-  --fonte-principal: "Poppins";
+  --primary-cor: #eb5b95;
+  --secondary-color: #2729d3;
+  --main-font: "Poppins";
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: var(--fonte-principal);
+  font-family: var(--main-font);
 }
 
-header {
-  border-radius: 8px;
-  width: min-content;
+html {
+  width: 100%;
+  min-height: 100dvh;
+  background-color: #fff;
 }
 
 body {
-  height: min(100dvh, calc(100vw * (16 / 9)));
-  width: min(100vw, calc(100dvh * (9 / 16)));
+  width: min(390px, 100vw);
+  min-height: 100dvh;
   position: relative;
   background-color: #fff;
   margin: 0 auto;
   padding: 14px 10px 0;
+  z-index: 1;
 }
 
-nav {
-  display: flex;
-  gap: 20px;
-  width: min-content;
+#h-s {
+  background-color: var(--secondary-color);
+  padding: 20px;
+  border-radius: 8px 8px 0 0;
+  overflow: visible;
 }
 
-nav div {
+#i-main {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  gap: 5px;
+  margin-bottom: 14px;
 }
 
 .svg-class {
@@ -51,79 +54,64 @@ nav div {
   gap: 5px;
 }
 
-.icon-reguest {
-  width: 32px;
-  fill: #3d3a7a;
-  padding: 8px;
-  border-radius: 8px;
-  border: solid;
-  border-color: #f3f3f3;
+#turn-top {
+  transform: rotate(90deg) scale(1.4);
 }
 
-#users {
+#text-main {
+  color: #fff;
+  font-size: 40px;
+  font-weight: 700;
+  padding-left: 40px;
+  margin-bottom: 24px;
+}
+
+nav {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-#users h3 {
-  white-space: nowrap;
-  margin-top: 20px;
-}
-
-#img-user {
-  width: 40px;
-  height: 55px;
-  object-fit: cover;
-  margin-left: 8px;
-  border-radius: 10px;
-}
-
-.user p {
-  color: #343172;
-  font-size: 12px;
-}
-
-.user {
-  display: flex;
-  align-items: center;
+  width: 100%;
+  justify-content: space-around;
 }
 
 .month {
   color: #bab5f7;
-  width: 100px;
-  height: 170px;
+  width: 60px;
+  height: 130px;
   border-radius: 17px;
 }
 
 .n-month {
-  font-size: 30px;
+  font-size: 26px;
   font-weight: 600;
-}
-
-.month.active {
-  background-color: #fff;
-  color: var(--cor-secundaria);
-  fill: var(--cor-secundaria);
-  position: relative;
-  z-index: 1;
-  bottom: -43px;
-}
-
-.month.active .month-down {
-  height: 100%;
-  width: 100%;
-  align-items: center;
-  text-align: center;
-  align-content: center;
 }
 
 .month-down {
   height: 100%;
   width: 100%;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: flex-end;
   text-align: center;
-  align-content: end;
+  padding-bottom: 14px;
+}
+
+.month p:last-child {
+  font-size: 12px;
+}
+
+.month.active {
+  background-color: #fff;
+  color: var(--secondary-color);
+  fill: var(--secondary-color);
+  position: relative;
+  z-index: 50;
+  bottom: -43px;
+  box-shadow: 0 4px 16px rgba(39, 41, 211, 0.15);
+}
+
+.month.active .month-down {
+  justify-content: center;
+  padding-bottom: 0;
 }
 
 #svg-calendar {
@@ -131,97 +119,35 @@ nav div {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 2px;
 }
 
-#text-main {
-  margin-left: 30px;
-  margin-top: 50px;
-  font-weight: 700;
+main {
+  padding: 0 12px 40px;
 }
-
-#h-s {
-  background-color: var(--cor-secundaria);
-  padding: 20px;
-}
-
-#i-main {
-  padding: 10px 20px;
-}
-
-#turn-top {
-  transform: rotate(90deg) scale(1.4);
-}
-
-/* #box-1 {
-  margin-bottom: 16px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
-
-/* .box {
-  
-  box-shadow: -3px 3px 5px 3px rgba(0, 0, 0, 0.03);
-  height: 450px;
-  width: 450px;
-  border-radius: 2rem;
-  padding: 40px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.box h3 {
-  font-size: 18px;
-  font-weight: bold;
-  font-family: Poppins;
-  color: #3d3a7a;
-}
-
-.box > p {
-  padding: 12px 8px;
-  margin: 8px 0;
-  line-height: 1.8;
-  font-size: 16px;
-} */
 
 #box-1 {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 40px;
-}
-
-#box-1 .box:first-child {
-  margin-top: -20px; 
-  z-index: 10;
-  position: relative;
+  gap: 16px;
+  padding-top: 60px;
 }
 
 .box {
   background-color: #fff;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); 
+  box-shadow: 0 8px 32px rgba(39, 41, 211, 0.07);
   border-radius: 2rem;
-  padding: 30px;
-  position: relative;
-  width: min(90%, 450px);
-  margin-bottom: 20px; 
-  z-index: 0;
-  margin-bottom: 25px;
-}
-
-.box:first-of-type {
-  margin-top: -40px;
-  z-index: 10; 
+  padding: 28px;
+  width: 100%;
 }
 
 .box-header-icons {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 25px;
+  margin-bottom: 22px;
 }
 
 .box-icons-group {
@@ -235,10 +161,11 @@ nav div {
   width: 28px;
   height: 28px;
   border-radius: 6px;
-  border: 1px solid #f8f8ff;
+  border: 1px solid #f0f0ff;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  background-color: transparent;
 }
 
 .icon-small.active {
@@ -253,18 +180,13 @@ nav div {
 
 .box-users img,
 .box-users .icon-small {
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
   border-radius: 8px;
   object-fit: cover;
   border: 2px solid #fff;
-  margin-left: -12px; 
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
-}
-
-.box-users img:first-child,
-.box-users div:first-child {
-  margin-left: 0;
+  margin-left: -10px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.08);
 }
 
 .route-section {
@@ -274,9 +196,9 @@ nav div {
 
 .route-line {
   position: absolute;
-  left: 4px;
-  top: 22px; 
-  bottom: 22px; 
+  left: 10px;
+  top: 18px;
+  bottom: 18px;
   width: 1px;
   border-left: 2px dotted #e0e0f0;
   z-index: 0;
@@ -304,18 +226,59 @@ nav div {
 .location-name {
   font-weight: 700;
   color: #3d3a7a;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .time-info {
   color: #bab5f7;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 500;
 }
 
 .distance-section {
-  margin: 10px 0 10px 30px;
-  color: #bab5f7; 
+  margin: 10px 0 10px 34px;
+  color: #bab5f7;
   font-size: 11px;
   font-weight: 400;
+}
+
+@media (max-width: 480px) {
+  body {
+    width: 100%;
+    min-height: 100dvh;
+    padding: 0px;
+    height: 100%;
+  }
+
+  #h-s {
+    padding: 14px;
+  }
+
+  #text-main {
+    font-size: 32px;
+    padding-left: 24px;
+    margin-bottom: 16px;
+  }
+
+  .month {
+    width: 52px;
+    height: 110px;
+  }
+
+  .n-month {
+    font-size: 22px;
+  }
+
+  .month.active {
+    bottom: -36px;
+  }
+
+  #box-1 {
+    padding-top: 52px;
+  }
+
+  .box {
+    padding: 18px;
+    border-radius: 1.4rem;
+  }
 }

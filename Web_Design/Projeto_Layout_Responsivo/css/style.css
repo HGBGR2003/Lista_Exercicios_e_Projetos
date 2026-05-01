@@ -1,18 +1,18 @@
 :root {
-      --cor-primaria: #eb5b95;
-      --cor-secundaria: #2729d3;
-      --fonte-principal: Poppins;
+      --primary-cor: #eb5b95;
+      --secondary-color: #2729d3;
+      --main-font: Poppins;
       }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: var(--fonte-principal);
+  font-family: var(--main-font);
 }
 
 body {
-  font-family: var(--fonte-principal);
+  font-family: var(--main-font);
   height: min(100dvh, calc(100vw * (16 / 9)));
   width: min(100vw, calc(100dvh * (9 / 16)));
   aspect-ratio: 9/16;
@@ -61,14 +61,14 @@ nav div {
   border-color: #f3f3f3;
 }
 
-.cabecalho {
+.head {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 14px;
 }
 
-.grido {
+.scream {
   display: grid;
   grid-template-columns: 114px 1fr;
   gap: 12px;
@@ -90,7 +90,7 @@ nav div {
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background-color: var(--cor-primaria);
+  background-color: var(--primary-cor);
   color: #fff;
   font-size: 10px;
   font-weight: 900;
@@ -142,7 +142,7 @@ nav div {
   font-size: 25px;
   font-weight: bold;
   font-family: Poppins;
-  color: var(--cor-primaria);
+  color: var(--primary-cor);
 }
 
 #data p {
@@ -150,7 +150,7 @@ nav div {
   font-size: 15px;
 }
 
-#valor{
+#value{
   align-items: center;
   padding-left: 80px;
 }
@@ -185,7 +185,7 @@ nav div {
   color: #cecdd4;
 }
 
-#text-principal h1 {
+#text-main h1 {
   font-size: 18px;
   font-weight: 800;
   line-height: 1.1;
@@ -231,7 +231,7 @@ nav div {
   font-weight: bold;
   font-family: Poppins;
   font-size: 18px;
-  color: var(--cor-primaria);
+  color: var(--primary-cor);
 }
 
 .box > p {
@@ -258,24 +258,13 @@ form {
   gap: 15px;
 }
 
-/* button {
-  font-weight: bold;
-  padding: 20px;
-  color: #fff;
-  background-color: var(--cor-secundaria);
-  border-radius: 20px;
-  padding-bottom: 30px;
-  padding-top: 30px;
-  border: none;
-}  */
-
 .top-actions {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
 }
 
-.icon-princpal {
+.icon-main {
   height: 88px;
   border-radius: 14px;
   background-color: #fff;
@@ -288,32 +277,32 @@ form {
   gap: 8px;
 }
 
-.icon-princpal .svg-class {
+.icon-main .svg-class {
   width: 17px;
   fill: #a5a2be;
 }
 
-.icon-princpal span {
+.icon-main span {
   font-size: 11px;
   font-weight: 600;
   color: #a5a2be;
 }
 
-.icon-princpal.ativo{
-  background-color: var(--cor-primaria);
+.icon-main.active{
+  background-color: var(--primary-cor);
 }
 
-.icon-princpal.ativo .svg-class {
+.icon-main.active .svg-class {
   fill: #fff;
 }
 
-.icon-princpal.ativo span {
+.icon-main.active span {
   color: #fff;
 }
 
 #btn-decline{
   background-color: #fff;
-  color: var(--cor-primaria);
+  color: var(--primary-cor);
 }
 
 
