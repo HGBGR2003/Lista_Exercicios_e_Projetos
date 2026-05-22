@@ -310,22 +310,22 @@ form {
   border: none;
   cursor: pointer;
   font: inherit;
-  transition: opacity 0.2s ease;
+  transition: transform 0.25s ease;
 }
 
 #btn-decline:hover {
-  opacity: 0.85;
+  transform: scale(1.04);
 }
 
 #btn-accept {
   border: none;
   cursor: pointer;
   font: inherit;
-  transition: filter 0.2s ease;
+  transition: transform 0.25s ease;
 }
 
 #btn-accept:hover {
-  filter: brightness(1.08);
+  transform: scale(1.04);
 }
 
 #ride-panel {
