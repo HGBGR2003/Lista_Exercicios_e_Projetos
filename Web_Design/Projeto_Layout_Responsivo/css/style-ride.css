@@ -79,6 +79,120 @@ nav {
   gap: 4px;
 }
 
+.date-picker {
+  --date-gap: 4px;
+  --date-item-width: 60px;
+  position: relative;
+  width: 100%;
+  min-height: 165px;
+  overflow: visible;
+}
+
+.date-picker__indicator {
+  position: absolute;
+  left: 50%;
+  bottom: -43px;
+  transform: translateX(-50%);
+  z-index: 50;
+  width: var(--date-item-width);
+  height: 165px;
+  border-radius: 17px;
+  background-color: #fff;
+  color: var(--secondary-color);
+  fill: var(--secondary-color);
+  box-shadow: 0 4px 16px rgba(39, 41, 211, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  text-align: center;
+  padding-bottom: 57px;
+  pointer-events: none;
+}
+
+.date-picker__viewport {
+  width: 100%;
+  overflow: hidden;
+}
+
+.date-picker__track {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: var(--date-gap);
+  transition: transform 0.35s ease;
+  will-change: transform;
+}
+
+.date-slot {
+  flex: 0 0 var(--date-item-width);
+  width: var(--date-item-width);
+}
+
+.date-slot--empty {
+  height: 165px;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.date-item {
+  width: 100%;
+  height: 165px;
+  border-radius: 17px;
+  color: #fff;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font: inherit;
+  display: block;
+}
+
+.date-item .month-down {
+  pointer-events: none;
+}
+
+.date-item:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.8);
+  outline-offset: 2px;
+}
+
+.box--add {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 180px;
+  cursor: pointer;
+  border: none;
+  width: 100%;
+}
+
+.box--add__btn {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  border: 1px solid #f0f0ff;
+  background-color: #f8f8ff;
+  color: var(--secondary-color);
+  font-size: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.box--add:hover .box--add__btn,
+.box--add__btn:hover {
+  background-color: #f0f0ff;
+}
+
+.box--add__btn:focus-visible {
+  outline: 2px solid var(--secondary-color);
+  outline-offset: 2px;
+}
+
 .month {
   width: 60px;
   height: 165px;
@@ -381,6 +495,29 @@ main {
     padding-bottom: 72px;
   }
 
+  .date-picker {
+    --date-item-width: 100px;
+    --date-gap: 12px;
+    min-height: 160px;
+  }
+
+  .date-picker__indicator {
+    width: var(--date-item-width);
+    height: 210px;
+    bottom: -55px;
+    border-radius: 24px;
+    padding-bottom: 72px;
+  }
+
+  .date-slot--empty {
+    height: 160px;
+  }
+
+  .date-item {
+    height: 160px;
+    border-radius: 24px;
+  }
+
   #box-1 {
     padding-top: 80px;
     padding-left: 20px;
@@ -421,6 +558,16 @@ main {
 
   .box-users-child i {
     font-size: 36px;
+  }
+
+  .box--add {
+    min-height: 220px;
+  }
+
+  .box--add__btn {
+    width: 72px;
+    height: 72px;
+    font-size: 32px;
   }
 
   .route-row {
@@ -489,6 +636,27 @@ main {
 
   .month.active .month-down {
     padding-bottom: 46px;
+  }
+
+  .date-picker {
+    --date-item-width: 68px;
+    --date-gap: 8px;
+    min-height: 100px;
+  }
+
+  .date-picker__indicator {
+    width: var(--date-item-width);
+    height: 134px;
+    bottom: -36px;
+    padding-bottom: 46px;
+  }
+
+  .date-slot--empty {
+    height: 100px;
+  }
+
+  .date-item {
+    height: 100px;
   }
 
   #box-1 {
@@ -586,6 +754,27 @@ main {
     height: 144px;
   }
 
+  .date-picker {
+    --date-gap: 4px;
+    --date-item-width: calc((100% - 4 * var(--date-gap)) / 5);
+    min-height: 110px;
+  }
+
+  .date-picker__indicator {
+    width: var(--date-item-width);
+    height: 144px;
+    bottom: -36px;
+    padding-bottom: 46px;
+  }
+
+  .date-slot--empty {
+    height: 110px;
+  }
+
+  .date-item {
+    height: 110px;
+  }
+
   #box-1 {
     padding-top: 52px;
   }
@@ -636,6 +825,40 @@ main {
 
   .month.active .month-down {
     padding-bottom: 38px;
+  }
+
+  .date-picker {
+    --date-gap: 2px;
+    --date-item-width: calc((100% - 4 * var(--date-gap)) / 5);
+    min-height: 80px;
+  }
+
+  .date-picker__indicator {
+    width: var(--date-item-width);
+    height: 110px;
+    bottom: -30px;
+    padding-bottom: 38px;
+  }
+
+  .date-picker .n-month {
+    font-size: 14px;
+  }
+
+  .date-picker .month-label {
+    font-size: 9px;
+  }
+
+  .date-picker .month-cal-icon {
+    width: 14px;
+    height: 14px;
+  }
+
+  .date-slot--empty {
+    height: 80px;
+  }
+
+  .date-item {
+    height: 80px;
   }
 
   #box-1 {
@@ -723,6 +946,40 @@ main {
 
   .month.active .month-down {
     padding-bottom: 32px;
+  }
+
+  .date-picker {
+    --date-gap: 1px;
+    --date-item-width: calc((100% - 4 * var(--date-gap)) / 5);
+    min-height: 68px;
+  }
+
+  .date-picker__indicator {
+    width: var(--date-item-width);
+    height: 94px;
+    bottom: -25px;
+    padding-bottom: 32px;
+  }
+
+  .date-picker .n-month {
+    font-size: 12px;
+  }
+
+  .date-picker .month-label {
+    font-size: 8px;
+  }
+
+  .date-picker .month-cal-icon {
+    width: 12px;
+    height: 12px;
+  }
+
+  .date-slot--empty {
+    height: 68px;
+  }
+
+  .date-item {
+    height: 68px;
   }
 
   #box-1 {
@@ -847,6 +1104,40 @@ main {
 
   .month.active .month-down {
     padding-bottom: 28px;
+  }
+
+  .date-picker {
+    --date-gap: 1px;
+    --date-item-width: calc((100% - 4 * var(--date-gap)) / 5);
+    min-height: 60px;
+  }
+
+  .date-picker__indicator {
+    width: var(--date-item-width);
+    height: 84px;
+    bottom: -22px;
+    padding-bottom: 28px;
+  }
+
+  .date-picker .n-month {
+    font-size: 10px;
+  }
+
+  .date-picker .month-label {
+    font-size: 7px;
+  }
+
+  .date-picker .month-cal-icon {
+    width: 12px;
+    height: 12px;
+  }
+
+  .date-slot--empty {
+    height: 60px;
+  }
+
+  .date-item {
+    height: 60px;
   }
 
   #box-1 {
