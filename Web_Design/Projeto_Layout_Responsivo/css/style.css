@@ -274,6 +274,11 @@ form {
   align-items: center;
   justify-content: center;
   gap: 8px;
+  cursor: pointer;
+  border: none;
+  font: inherit;
+  width: 100%;
+  padding: 0;
 }
 
 .icon-main .svg-class {
@@ -300,8 +305,54 @@ form {
 }
 
 #btn-decline {
-  background-color: #fff;
+  background-color: transparent;
   color: var(--primary-cor);
+  border: none;
+  cursor: pointer;
+  font: inherit;
+  transition: opacity 0.2s ease;
+}
+
+#btn-decline:hover {
+  opacity: 0.85;
+}
+
+#btn-accept {
+  border: none;
+  cursor: pointer;
+  font: inherit;
+  transition: filter 0.2s ease;
+}
+
+#btn-accept:hover {
+  filter: brightness(1.08);
+}
+
+#ride-panel {
+  width: 100%;
+}
+
+.panel-empty {
+  width: 100%;
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  padding: 24px 16px;
+}
+
+.panel-empty p {
+  font-size: 18px;
+  font-weight: 600;
+  color: #3d3a7a;
+  text-align: center;
+  line-height: 1.5;
+  max-width: 280px;
+}
+
+[hidden] {
+  display: none !important;
 }
 
 #btn {

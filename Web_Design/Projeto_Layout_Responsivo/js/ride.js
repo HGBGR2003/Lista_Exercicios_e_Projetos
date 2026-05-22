@@ -1,7 +1,3 @@
-/**
- * Ride — carrossel de datas e cards por dia (estado em memória na sessão).
- */
-
 const MAY_DAYS = Array.from({ length: 30 }, (_, i) => ({
   day: i + 1,
   month: "May",
