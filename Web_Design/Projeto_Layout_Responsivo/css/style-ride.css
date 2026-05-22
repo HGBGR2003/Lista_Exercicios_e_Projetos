@@ -55,6 +55,26 @@ body {
   gap: 5px;
 }
 
+a.icons--back {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+a.icons--back:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.85);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+a.icons--back .svg-class {
+  transition: opacity 0.2s ease;
+}
+
+a.icons--back:hover .svg-class {
+  opacity: 0.9;
+}
+
 #turn-top {
   transform: rotate(90deg) scale(1.4);
 }
