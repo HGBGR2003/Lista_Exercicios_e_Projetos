@@ -45,7 +45,6 @@ const MOCK_RIDES = [
   },
 ];
 
-// Day 28 starts with both cards pre-loaded; other days start empty
 const ridesByDay = {
   [SEED_DAY]: [0, 1],
 };
@@ -144,7 +143,6 @@ function renderDateTrack() {
 }
 
 function resetTrackAfterAnimation(newSelectedDay) {
-  // Clear cards from the day we're leaving (unless it's the fixed day 28)
   if (selectedDay !== SEED_DAY) {
     delete ridesByDay[selectedDay];
   }
@@ -205,7 +203,6 @@ function handleDateClick(e) {
     : CENTER_INDEX;
 
   if (clickedIndex === CENTER_INDEX) {
-    // Clear cards from the day we're leaving (unless it's the fixed day 28)
     if (selectedDay !== SEED_DAY) {
       delete ridesByDay[selectedDay];
     }
@@ -317,7 +314,6 @@ function handleAddCardClick(e) {
 
   const day = selectedDay;
 
-  // Day 28 is fixed — its cards are always pre-loaded, nothing to add
   if (day === SEED_DAY) return;
 
   if (!ridesByDay[day]) {
