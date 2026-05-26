@@ -45,10 +45,12 @@ const MOCK_RIDES = [
   },
 ];
 
-const ridesByDay = {};
+// Day 28 starts with both cards pre-loaded; other days start empty
+const ridesByDay = {
+  [SEED_DAY]: [0, 1],
+};
 
 let selectedDay = SEED_DAY;
-let seedCards = null;
 let slotWidth = 0;
 let isAnimating = false;
 
@@ -142,6 +144,11 @@ function renderDateTrack() {
 }
 
 function resetTrackAfterAnimation(newSelectedDay) {
+  // Clear cards from the day we're leaving (unless it's the fixed day 28)
+  if (selectedDay !== SEED_DAY) {
+    delete ridesByDay[selectedDay];
+  }
+
   selectedDay = newSelectedDay;
   isAnimating = false;
 
@@ -198,6 +205,10 @@ function handleDateClick(e) {
     : CENTER_INDEX;
 
   if (clickedIndex === CENTER_INDEX) {
+    // Clear cards from the day we're leaving (unless it's the fixed day 28)
+    if (selectedDay !== SEED_DAY) {
+      delete ridesByDay[selectedDay];
+    }
     selectedDay = newDay;
     updateIndicator();
     renderRideCards();
@@ -281,7 +292,6 @@ function createAddCard() {
 }
 
 function getRideCount(day) {
-  if (day === SEED_DAY) return 0;
   return ridesByDay[day]?.length ?? 0;
 }
 
@@ -289,14 +299,6 @@ function renderRideCards() {
   if (!boxContainer) return;
 
   boxContainer.replaceChildren();
-
-  if (selectedDay === SEED_DAY) {
-    const clone = seedCards.cloneNode(true);
-    Array.from(clone.children).forEach((child) => {
-      boxContainer.appendChild(child);
-    });
-    return;
-  }
 
   const count = getRideCount(selectedDay);
   for (let i = 0; i < count; i += 1) {
@@ -311,9 +313,13 @@ function renderRideCards() {
 
 function handleAddCardClick(e) {
   const addSection = e.target.closest(".box--add");
-  if (!addSection || selectedDay === SEED_DAY) return;
+  if (!addSection) return;
 
   const day = selectedDay;
+
+  // Day 28 is fixed — its cards are always pre-loaded, nothing to add
+  if (day === SEED_DAY) return;
+
   if (!ridesByDay[day]) {
     ridesByDay[day] = [];
   }
@@ -344,8 +350,6 @@ function init() {
   boxContainer = document.getElementById("box-1");
   indicatorDay = document.getElementById("indicator-day");
   indicatorMonth = document.getElementById("indicator-month");
-
-  seedCards = boxContainer.cloneNode(true);
 
   selectedDay = SEED_DAY;
 

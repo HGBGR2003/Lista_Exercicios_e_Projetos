@@ -4,39 +4,41 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ride</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/ride.css" />
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <link rel="stylesheet" href="css/style-ride.css">
 </head>
 
-<body>
-  <header id="h-s">
-    <section class="flex justify-between items-center mb-[14px]" id="i-main">
-      <a href="index.html" class="icons icons--back" id="btn-back" aria-label="Back to home">
-        <svg class="svg-class" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="48" height="48" aria-hidden="true">
-          <path
-            d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z" />
+<body class="w-full min-h-[100dvh] bg-white m-0 p-0">
+
+  <header class="bg-[#2729d3] px-5 pt-5 pb-0 rounded-t-[8px] overflow-visible">
+
+    <section class="flex justify-between items-center mb-[14px]">
+      <a href="index.html"
+        class="flex items-center gap-[5px] no-underline text-inherit cursor-pointer"
+        id="btn-back" aria-label="Back to home">
+        <svg class="w-5 fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" aria-hidden="true">
+          <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"/>
         </svg>
       </a>
-      <div class="icons">
-        <svg class="svg-class" id="turn-top" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-          <path
-            d="M32 64C14.3 64 0 78.3 0 96s14.3 32 32 32l86.7 0c12.3 28.3 40.5 48 73.3 48s61-19.7 73.3-48L480 128c17.7 0 32-14.3 32-32s-14.3-32-32-32L265.3 64C253 35.7 224.8 16 192 16s-61 19.7-73.3 48L32 64zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32l246.7 0c12.3 28.3 40.5 48 73.3 48s61-19.7 73.3-48l54.7 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-54.7 0c-12.3-28.3-40.5-48-73.3-48s-61 19.7-73.3 48L32 224zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32l54.7 0c12.3 28.3 40.5 48 73.3 48s61-19.7 73.3-48L480 448c17.7 0 32-14.3 32-32s-14.3-32-32-32l-246.7 0c-12.3-28.3-40.5-48-73.3-48s-61 19.7-73.3 48L32 384z" />
+      <div class="flex items-center gap-[5px]">
+        <svg class="w-5 fill-white rotate-90 scale-[1.4]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+          <path d="M32 64C14.3 64 0 78.3 0 96s14.3 32 32 32l86.7 0c12.3 28.3 40.5 48 73.3 48s61-19.7 73.3-48L480 128c17.7 0 32-14.3 32-32s-14.3-32-32-32L265.3 64C253 35.7 224.8 16 192 16s-61 19.7-73.3 48L32 64zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32l246.7 0c12.3 28.3 40.5 48 73.3 48s61-19.7 73.3-48l54.7 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-54.7 0c-12.3-28.3-40.5-48-73.3-48s-61 19.7-73.3 48L32 224zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32l54.7 0c12.3 28.3 40.5 48 73.3 48s61-19.7 73.3-48L480 448c17.7 0 32-14.3 32-32s-14.3-32-32-32l-246.7 0c-12.3-28.3-40.5-48-73.3-48s-61 19.7-73.3 48L32 384z"/>
         </svg>
       </div>
     </section>
 
-    <section class="header-title-ride">
-      <h1 class="text-white text-[40px]" id="text-main">Ride</h1>
+    <section class="w-full">
+      <h1 class="text-white text-[40px] font-bold mb-6 max-[480px]:text-[32px] max-[480px]:mb-4">Ride</h1>
     </section>
 
     <section class="block w-full">
-      <section class="date-picker" aria-label="Selecionar data">
+      <div class="date-picker" aria-label="Selecionar data">
         <div class="date-picker__indicator" aria-hidden="true">
           <span class="month-top-slot">
             <svg class="month-cal-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" aria-hidden="true">
-              <path
-                d="M120 0c13.3 0 24 10.7 24 24l0 40 160 0 0-40c0-13.3 10.7-24 24-24s24 10.7 24 24l0 40 32 0c35.3 0 64 28.7 64 64l0 288c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 128C0 92.7 28.7 64 64 64l32 0 0-40c0-13.3 10.7-24 24-24zm0 112l-56 0c-8.8 0-16 7.2-16 16l0 48 352 0 0-48c0-8.8-7.2-16-16-16l-264 0zM48 224l0 192c0 8.8 7.2 16 16 16l320 0c8.8 0 16-7.2 16-16l0-192-352 0z" />
+              <path d="M120 0c13.3 0 24 10.7 24 24l0 40 160 0 0-40c0-13.3 10.7-24 24-24s24 10.7 24 24l0 40 32 0c35.3 0 64 28.7 64 64l0 288c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 128C0 92.7 28.7 64 64 64l32 0 0-40c0-13.3 10.7-24 24-24zm0 112l-56 0c-8.8 0-16 7.2-16 16l0 48 352 0 0-48c0-8.8-7.2-16-16-16l-264 0zM48 224l0 192c0 8.8 7.2 16 16 16l320 0c8.8 0 16-7.2 16-16l0-192-352 0z"/>
             </svg>
           </span>
           <p class="n-month date-picker__day" id="indicator-day">28</p>
@@ -45,89 +47,24 @@
         <div class="date-picker__viewport">
           <div class="date-picker__track" id="date-track" role="list"></div>
         </div>
-      </section>
+      </div>
     </section>
   </header>
 
-  <main class="pt-4">
-    <div id="box-1">
-      <section class="box">
-        <div class="box-header-icons">
-          <div class="box-icons-group">
-            <i class="fa-solid fa-wifi icon-small active"></i>
-            <i class="fa-solid fa-suitcase icon-small active"></i>
-            <i class="fa-solid fa-bolt icon-small"></i>
-          </div>
-          <div class="box-users">
-            <img src="images/man-black.png" alt="User 1">
-            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User 2">
-          </div>
-        </div>
-
-        <div class="route-section">
-          <div class="route-row">
-            <span class="route-origin-marker" aria-hidden="true"></span>
-            <div class="route-item-body">
-              <p class="location-name">Chicago</p>
-              <p class="time-info">20:00</p>
-            </div>
-          </div>
-          <div class="route-row route-row--middle">
-            <div class="route-line-wrap" aria-hidden="true">
-              <span class="route-line-segment"></span>
-            </div>
-            <p class="distance-section">Distance 15, 8 km</p>
-          </div>
-          <div class="route-row">
-            <span class="route-dest-marker" aria-hidden="true"></span>
-            <div class="route-item-body">
-              <p class="location-name">Oak Park</p>
-              <p class="time-info">22:30</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="box">
-        <div class="box-header-icons">
-          <div class="box-icons-group">
-            <i class="fa-solid fa-wifi icon-small"></i>
-            <i class="fa-solid fa-suitcase icon-small active"></i>
-          </div>
-          <div class="box-users">
-            <div class="box-users-child" aria-hidden="true">
-              <i class="fa-solid fa-child"></i>
-            </div>
-            <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="User 3">
-            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User 4">
-          </div>
-        </div>
-
-        <div class="route-section">
-          <div class="route-row">
-            <span class="route-origin-marker" aria-hidden="true"></span>
-            <div class="route-item-body">
-              <p class="location-name">New York</p>
-              <p class="time-info">21:45</p>
-            </div>
-          </div>
-          <div class="route-row route-row--middle">
-            <div class="route-line-wrap" aria-hidden="true">
-              <span class="route-line-segment"></span>
-            </div>
-            <p class="distance-section">Distance 19, 3 km</p>
-          </div>
-          <div class="route-row">
-            <span class="route-dest-marker" aria-hidden="true"></span>
-            <div class="route-item-body">
-              <p class="location-name">Park Avenue</p>
-              <p class="time-info">22:40</p>
-            </div>
-          </div>
-        </div>
+  <main class="px-3 pb-10">
+    <div id="box-1" class="w-full flex flex-col items-center gap-4
+        pt-[60px]
+        max-[480px]:pt-[46px]
+        min-[481px]:max-[600px]:pt-[60px]
+        min-[601px]:max-[1024px]:pt-[60px]">
+      <section class="box box--add">
+        <button type="button" class="box--add__btn" aria-label="Adicionar viagem">
+          <i class="fa-solid fa-plus" aria-hidden="true"></i>
+        </button>
       </section>
     </div>
   </main>
+
   <script src="js/ride.js" defer></script>
 </body>
 </html>

@@ -13,17 +13,24 @@ let ridePanel = null;
 let emptyPanel = null;
 let emptyMessage = null;
 
-function setActiveTab(tabId) {
-  if (tabId === activeTab) return;
-
-  activeTab = tabId;
-
+function updateTabStyles() {
   tabButtons.forEach((btn) => {
-    const isActive = btn.dataset.tab === tabId;
-    btn.classList.toggle("active", isActive);
+    const isActive = btn.dataset.tab === activeTab;
     btn.setAttribute("aria-selected", isActive ? "true" : "false");
-  });
 
+    btn.style.backgroundColor = isActive ? "#eb5b95" : "#ffffff";
+
+    const svg = btn.querySelector("svg");
+    if (svg) svg.style.fill = isActive ? "#ffffff" : "#a5a2be";
+
+    const span = btn.querySelector("span");
+    if (span) span.style.color = isActive ? "#ffffff" : "#a5a2be";
+  });
+}
+
+function setActiveTab(tabId) {
+  activeTab = tabId;
+  updateTabStyles();
   renderPanel();
 }
 
@@ -51,12 +58,6 @@ function renderPanel() {
 
 function handleDecline() {
   rideDeclined = true;
-
-  if (activeTab !== "ride") {
-    setActiveTab("ride");
-    return;
-  }
-
   renderPanel();
 }
 
@@ -91,6 +92,7 @@ function init() {
 
   bindTabs();
   bindRideActions();
+  updateTabStyles();
   renderPanel();
 }
 
