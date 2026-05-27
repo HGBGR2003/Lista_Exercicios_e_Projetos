@@ -43,7 +43,7 @@ Interface de aplicativo de transporte inspirada em apps de corrida. Apresenta te
  ┣ 📂 Lista Exercicios e Projetos
  ┃ ┣ 📂 inteligencia-computacional
  ┃ ┗ 📂 web-design
- ┃   ┗ 📂 projeto-layout-responsivo
- ┗ 📂 projetos
-   ┗ 📂 mundo-wumpus
+   ┗ 📂 projetos
+     ┗ 📂 projeto-layout-responsivo
+     ┗ 📂 mundo-wumpus
 ```
