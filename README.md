@@ -35,8 +35,6 @@ Interface de aplicativo de transporte inspirada em apps de corrida. Apresenta te
 
 <img width="664" height="896" alt="image" src="https://github.com/user-attachments/assets/678eb1ed-6ae8-4016-ac1f-53330fb94a8e" />
 
-<img width="554" height="916" alt="image" src="https://github.com/user-attachments/assets/34bbae91-95ad-4464-9cd1-b7b9d87264c7" />
-
 ---
 
 ## 📌 Organização do Repositório
